@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+struct FlagImage<Content: View>: View {
+    let content: () -> Content
+
+    var body: some View {
+        content()
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+            .shadow(color: Color.black, radius:20)
+    }
+}
+
 struct ContentView: View {
     
     @State private var countries = ["Poland", "Nigeria", "Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Russia", "Spain", "UK", "US"].shuffled()
@@ -32,11 +43,10 @@ struct ContentView: View {
                     Button(action: {
                         self.buttonTapped(number)
                     }, label: {
-                        Image(countries[number])
-                            .renderingMode(.original)
-                            .clipShape(Capsule())
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            .shadow(color: .black, radius:20)
+                        FlagImage {
+                            Image(countries[number])
+                                .renderingMode(.original)
+                        }
                     })
                 }
                 Text("Your current score: \(score)")

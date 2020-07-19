@@ -49,7 +49,7 @@ struct ContentView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                 }
                 Section(header: Text("Total ammount")) {
-                    Text("$\(total, specifier: "%.2f")")
+                    Text("$\(total, specifier: "%.2f")").foregroundColor(tipPercentage == 4 ? .red : .primary)
                 }
                 Section(header: Text("Ammount per person")) {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
