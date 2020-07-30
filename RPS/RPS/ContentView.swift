@@ -49,7 +49,7 @@ struct ContentView: View {
     
     func check(number: Int) {
         numberOfMoves += 1
-        
+        //simplyfiy to numbers instead of string //kazdy kolejny z array wygrywa z poprzednim
         switch moves[appChoice] {
         case "Rock":
             if (moves[number] == "Paper" && winLose) {
