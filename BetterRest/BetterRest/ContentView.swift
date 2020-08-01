@@ -12,15 +12,14 @@ struct ContentView: View {
     @State private var sleepAmount = 8.0
     @State private var coffeAmount = 1
     
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
-    @State private var showAlert = false
-    
     private let hoursOfSleep = Array(stride(from: 4, through: 12, by: 0.25))
     
     var body: some View {
         NavigationView {
             Form {
+                Text("Recommended bedtime: \(recommendedBedtime)")
+                    .font(.subheadline)
+                    .foregroundColor(.blue)
                 Section(header: Text("When do you want to wake up?")){
                     DatePicker("Please enter time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()
@@ -45,13 +44,6 @@ struct ContentView: View {
                     }
                 }
             }.navigationTitle("BetterRest")
-            .navigationBarItems(trailing:
-                                    Button(action: calculateBedTime, label: {
-                                        Text("Calculate")
-                                    }))
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
         }
     }
     
@@ -62,7 +54,7 @@ struct ContentView: View {
         return Calendar.current.date(from: components) ?? Date()
     }
     
-    func calculateBedTime() {
+    var recommendedBedtime: String {
         let model = SleepCalculator()
         
         let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
@@ -75,14 +67,10 @@ struct ContentView: View {
             
             let formatter = DateFormatter()
             formatter.timeStyle = .short
-            alertMessage = formatter.string(from: sleepTime)
-            alertTitle = "Your ideal bedtime is"
+            return formatter.string(from: sleepTime)
         } catch {
-            alertTitle = "Error"
-            alertMessage = "We cannot calculate your bedtime"
+            return "??"
         }
-        
-        showAlert = true
     }
 }
 
