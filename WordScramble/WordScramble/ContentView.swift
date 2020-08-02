@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var alertMessage = ""
     @State private var showAlert = false
     
+    @State private var userScore = 0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -27,7 +29,11 @@ struct ContentView: View {
                     Image(systemName: "\($0.count).circle")
                     Text("\($0)")
                 }
+                Text("Your score: \(userScore)")
             }.navigationBarTitle(Text("\(rootWord)"))
+            .navigationBarItems(leading: Button(action: startGame, label: {
+                Text("Restart")
+            }))
             .onAppear {
                 startGame()
             }
@@ -59,8 +65,14 @@ struct ContentView: View {
             return
         }
         
+        calculateScore(word: answer)
         usedWords.insert(answer, at: 0)
         newWord = ""
+    }
+    
+    func calculateScore(word: String) {
+        let wordLength = word.count
+        userScore += (wordLength * (usedWords.count+1))
     }
     
     func startGame() {
@@ -68,14 +80,17 @@ struct ContentView: View {
             if let content = try? String(contentsOf: fileURL) {
                 let allWords = content.components(separatedBy: "\n")
                 rootWord = allWords.randomElement() ?? "silkworm"
+                usedWords.removeAll()
+                userScore = 0
                 return
             }
         }
+        
         fatalError("Could not load start.txt from bundle.")
     }
     
     func isOriginal(word: String) -> Bool {
-        !usedWords.contains(word)
+        !usedWords.contains(word) && rootWord != word
     }
     
     func isPossible(word: String) -> Bool {
@@ -92,6 +107,9 @@ struct ContentView: View {
     }
     
     func isReal(word: String) -> Bool {
+        if word.count < 3 {
+            return false
+        }
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         
