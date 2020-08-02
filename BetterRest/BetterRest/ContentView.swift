@@ -27,8 +27,8 @@ struct ContentView: View {
                 }
                 Section(header: Text("Desired amount of sleep")) {
                     Picker(selection: $sleepAmount, label: Text("Desired amount of sleep")) {
-                        ForEach(hoursOfSleep, id: \.self) { hour in
-                            Text("\(hour, specifier: "%g") hours")
+                        ForEach(hoursOfSleep, id: \.self) {
+                            Text("\($0, specifier: "%g") hours")
                         }
                     }.pickerStyle(WheelPickerStyle())
                     .labelsHidden()
