@@ -12,6 +12,7 @@
 		8181254924D8803D005F42D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8181254824D8803D005F42D4 /* Assets.xcassets */; };
 		8181254C24D8803D005F42D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8181254B24D8803D005F42D4 /* Preview Assets.xcassets */; };
 		8181255424DC8411005F42D4 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181255324DC8411005F42D4 /* ContentView2.swift */; };
+		8181255624DD17EC005F42D4 /* Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181255524DD17EC005F42D4 /* Gestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8181254B24D8803D005F42D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8181254D24D8803D005F42D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8181255324DC8411005F42D4 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		8181255524DD17EC005F42D4 /* Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gestures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				8181254424D88037005F42D4 /* AnimationsApp.swift */,
 				8181254624D88037005F42D4 /* ContentView.swift */,
+				8181255524DD17EC005F42D4 /* Gestures.swift */,
 				8181255324DC8411005F42D4 /* ContentView2.swift */,
 				8181254824D8803D005F42D4 /* Assets.xcassets */,
 				8181254D24D8803D005F42D4 /* Info.plist */,
@@ -144,6 +147,7 @@
 				8181255424DC8411005F42D4 /* ContentView2.swift in Sources */,
 				8181254724D88037005F42D4 /* ContentView.swift in Sources */,
 				8181254524D88037005F42D4 /* AnimationsApp.swift in Sources */,
+				8181255624DD17EC005F42D4 /* Gestures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
