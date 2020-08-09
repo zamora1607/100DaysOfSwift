@@ -28,6 +28,10 @@ struct ContentView: View {
     @State private var score = 0
     @State private var alertMsg = ""
     
+    @State private var opacity = 1.0
+    @State private var animationAmount = 0.0
+    @State private var tappedCorrect = false
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -41,13 +45,20 @@ struct ContentView: View {
                 }
                 ForEach(0..<3) { number in
                     Button(action: {
-                        self.buttonTapped(number)
+                        withAnimation(Animation.easeInOut(duration: 1)) {
+                            self.buttonTapped(number)
+                            animationAmount += 360
+                            opacity = 0.25
+                        }
                     }, label: {
                         FlagImage {
                             Image(countries[number])
                                 .renderingMode(.original)
                         }
-                    })
+                    }).rotation3DEffect(
+                        .degrees((number == correctAnswer) && tappedCorrect ? animationAmount : 0.0),
+                        axis: (x: 0.0, y: 1.0, z: 0.0)
+                    ).opacity(((number != correctAnswer) || !tappedCorrect) ? opacity : 1.0)
                 }
                 Text("Your current score: \(score)")
                     .foregroundColor(.white)
@@ -62,10 +73,12 @@ struct ContentView: View {
     
     func buttonTapped(_ number: Int) {
         if number == correctAnswer {
+            tappedCorrect = true
             score += 1
             scoreTitle = "Correct"
             alertMsg = "Your score is \(score)"
         } else {
+            tappedCorrect = false
             scoreTitle = "Wrong"
             alertMsg = "Ops this is flag of \(countries[number])"
             score -= 1
@@ -75,6 +88,8 @@ struct ContentView: View {
     
     func askQuestion() {
         countries.shuffle()
+        opacity = 1.0
+        tappedCorrect = false
         correctAnswer = Int.random(in: 0...2)
     }
 }
