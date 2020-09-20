@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExpenseItem: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     let name: String
     let type: String
     let amount: Int
@@ -51,26 +51,40 @@ struct ContentView: View {
                             Text(item.type)
                         }
                         Spacer()
-                        Text("\(item.amount)")
+                        Text("PLN \(item.amount)")
+                            .fontWeight(.bold)
+                            .foregroundColor(colorLabel(amount: item.amount))
+                        
                     }
                 }
                 .onDelete(perform: removeItem)
             }
             .navigationBarTitle("Expenses")
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                                        showingAddExpense = true
-                                    }) {
-                                        Image(systemName: "plus")
-                                    })
+            .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+                showingAddExpense = true
+            }) {
+                Image(systemName: "plus")
+            })
         }.sheet(isPresented: $showingAddExpense) {
             AddView(expenses: self.expenses)
+        }
+    }
+    
+    func colorLabel(amount: Int) -> Color {
+        if amount <= 10 {
+            return Color.green
+        } else if amount <= 100 {
+            return Color.yellow
+        } else {
+            return Color.red
         }
     }
     
     func removeItem(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
