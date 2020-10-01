@@ -11,6 +11,10 @@
 		81C099F6251F991000870CB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C099F5251F991000870CB1 /* ContentView.swift */; };
 		81C099F8251F991300870CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C099F7251F991300870CB1 /* Assets.xcassets */; };
 		81C099FB251F991400870CB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C099FA251F991400870CB1 /* Preview Assets.xcassets */; };
+		81C09A0725225AA700870CB1 /* Content2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C09A0625225AA700870CB1 /* Content2.swift */; };
+		81C09A0A25225E8B00870CB1 /* AnimatingShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C09A0925225E8B00870CB1 /* AnimatingShapes.swift */; };
+		81C09A0E25265ED600870CB1 /* ComplexAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C09A0D25265ED600870CB1 /* ComplexAnimation.swift */; };
+		81C09A122526638800870CB1 /* SpirographView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C09A112526638800870CB1 /* SpirographView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		81C099F7251F991300870CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81C099FA251F991400870CB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81C099FC251F991400870CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81C09A0625225AA700870CB1 /* Content2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content2.swift; sourceTree = "<group>"; };
+		81C09A0925225E8B00870CB1 /* AnimatingShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingShapes.swift; sourceTree = "<group>"; };
+		81C09A0D25265ED600870CB1 /* ComplexAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexAnimation.swift; sourceTree = "<group>"; };
+		81C09A112526638800870CB1 /* SpirographView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +60,15 @@
 		81C099F2251F991000870CB1 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				81C09A0D25265ED600870CB1 /* ComplexAnimation.swift */,
 				81C099F3251F991000870CB1 /* DrawingApp.swift */,
 				81C099F5251F991000870CB1 /* ContentView.swift */,
+				81C09A0625225AA700870CB1 /* Content2.swift */,
 				81C099F7251F991300870CB1 /* Assets.xcassets */,
 				81C099FC251F991400870CB1 /* Info.plist */,
 				81C099F9251F991400870CB1 /* Preview Content */,
+				81C09A0925225E8B00870CB1 /* AnimatingShapes.swift */,
+				81C09A112526638800870CB1 /* SpirographView.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C09A0A25225E8B00870CB1 /* AnimatingShapes.swift in Sources */,
 				81C099F6251F991000870CB1 /* ContentView.swift in Sources */,
+				81C09A122526638800870CB1 /* SpirographView.swift in Sources */,
+				81C09A0E25265ED600870CB1 /* ComplexAnimation.swift in Sources */,
+				81C09A0725225AA700870CB1 /* Content2.swift in Sources */,
 				81C099F4251F991000870CB1 /* DrawingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
