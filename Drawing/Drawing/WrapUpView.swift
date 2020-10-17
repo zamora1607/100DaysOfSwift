@@ -13,8 +13,13 @@ struct WrapUpView: View {
     var body: some View {
         
         VStack {
+            
+            Spacer()
+            
             Arrow(thickness: thickness)
                 .frame(width: 300, height: 150, alignment: .center)
+            
+            Spacer()
             
             Slider(value: $thickness, in: 1...20, step:1)
                 .padding([.horizontal, .bottom])
@@ -36,7 +41,7 @@ struct Arrow: Shape {
         
         let thick = rect.maxY/thickness
         let stemLong = rect.maxX - rect.maxX/6
-        let arrowEnd = rect.maxX - rect.maxX/9
+        let arrowEnd = rect.maxX + thickness * 2 - rect.maxX/9
         let arrowWidth = thick * 0.75
         
         path.move(to: CGPoint(x: 0, y: rect.maxY))
