@@ -1,14 +1,14 @@
 //
-//  BetterRestApp.swift
-//  BetterRest
+//  CupcakeCornerApp.swift
+//  CupcakeCorner
 //
-//  Created by Ania on 27/07/2020.
+//  Created by Ania on 08/11/2020.
 //
 
 import SwiftUI
 
 @main
-struct BetterRestApp: App {
+struct CupcakeCornerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
