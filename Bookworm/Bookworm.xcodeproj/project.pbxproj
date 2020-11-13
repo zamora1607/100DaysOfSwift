@@ -16,6 +16,7 @@
 		81F8D6CE255E91D500642C37 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8D6CD255E91D400642C37 /* AddBookView.swift */; };
 		81F8D6D1255E9D2B00642C37 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8D6D0255E9D2B00642C37 /* RatingView.swift */; };
 		81F8D6D4255EA02F00642C37 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8D6D3255EA02F00642C37 /* EmojiRatingView.swift */; };
+		81F8D6D9255EA69A00642C37 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8D6D8255EA69A00642C37 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		81F8D6CD255E91D400642C37 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		81F8D6D0255E9D2B00642C37 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		81F8D6D3255EA02F00642C37 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		81F8D6D8255EA69A00642C37 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				81F8D697255C0F5B00642C37 /* BookwormApp.swift */,
 				81F8D699255C0F5B00642C37 /* ContentView.swift */,
+				81F8D6D8255EA69A00642C37 /* DetailView.swift */,
 				81F8D6D3255EA02F00642C37 /* EmojiRatingView.swift */,
 				81F8D69B255C0F6000642C37 /* Assets.xcassets */,
 				81F8D6A0255C0F6000642C37 /* Persistence.swift */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81F8D6A1255C0F6000642C37 /* Persistence.swift in Sources */,
+				81F8D6D9255EA69A00642C37 /* DetailView.swift in Sources */,
 				81F8D6A4255C0F6000642C37 /* Bookworm.xcdatamodeld in Sources */,
 				81F8D6D4255EA02F00642C37 /* EmojiRatingView.swift in Sources */,
 				81F8D69A255C0F5B00642C37 /* ContentView.swift in Sources */,
