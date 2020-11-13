@@ -38,6 +38,8 @@ struct DetailView: View {
                     .font(.title)
                     .foregroundColor(.secondary)
                 
+                Text("Published: \(self.book.publiced ?? Date(), formatter: dateFormatter)")
+                
                 Text(self.book.review ?? "No review")
                     .padding()
                 
@@ -58,6 +60,12 @@ struct DetailView: View {
                 self.deleteBook()
             }, secondaryButton: .cancel())
         }
+    }
+    
+    var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        return dateFormatter
     }
     
     func deleteBook() {

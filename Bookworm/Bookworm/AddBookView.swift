@@ -17,6 +17,7 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = ""
     @State private var review = ""
+    @State private var publiced = Date()
     
     let gengres = ["Fantasy", "Horror","Kids", "Poetry", "Romance", "Thriller"]
     
@@ -32,6 +33,11 @@ struct AddBookView: View {
                             Text($0)
                         }
                     }
+                    
+                    DatePicker(selection: $publiced, in: ...Date(), displayedComponents: .date) {
+                        Text("Published")
+                    }
+                    
                 }
                 
                 Section {
@@ -45,7 +51,8 @@ struct AddBookView: View {
                         newBook.title = self.title
                         newBook.author = self.author
                         newBook.rating = Int16(self.rating)
-                        newBook.genre = self.genre
+                        newBook.publiced = self.publiced
+                        newBook.genre = !self.genre.isEmpty ? self.genre : self.gengres[1]
                         newBook.review = self.review
                         
                         try? self.moc.save()
