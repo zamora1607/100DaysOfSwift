@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		8122F9D92561222900708C1D /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8122F9D72561222900708C1D /* Movie+CoreDataClass.swift */; };
 		8122F9DA2561222900708C1D /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8122F9D82561222900708C1D /* Movie+CoreDataProperties.swift */; };
+		81B59F8825612C8F00F0AED0 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F8625612C8F00F0AED0 /* Singer+CoreDataClass.swift */; };
+		81B59F8925612C8F00F0AED0 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F8725612C8F00F0AED0 /* Singer+CoreDataProperties.swift */; };
+		81B59F8C25612D0C00F0AED0 /* DynamicFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F8B25612D0C00F0AED0 /* DynamicFiltering.swift */; };
+		81B59F932561308A00F0AED0 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F922561308A00F0AED0 /* FilteredList.swift */; };
+		81B59F992561402400F0AED0 /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F952561402400F0AED0 /* Candy+CoreDataClass.swift */; };
+		81B59F9A2561402400F0AED0 /* Candy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F962561402400F0AED0 /* Candy+CoreDataProperties.swift */; };
+		81B59F9B2561402400F0AED0 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F972561402400F0AED0 /* Country+CoreDataClass.swift */; };
+		81B59F9C2561402400F0AED0 /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59F982561402400F0AED0 /* Country+CoreDataProperties.swift */; };
+		81B59FA12561434900F0AED0 /* RelationshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B59FA02561434900F0AED0 /* RelationshipsView.swift */; };
 		81F8D6E825603E1A00642C37 /* CoreDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8D6E725603E1A00642C37 /* CoreDataProjectApp.swift */; };
 		81F8D6EA25603E1A00642C37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8D6E925603E1A00642C37 /* ContentView.swift */; };
 		81F8D6EC25603E1E00642C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F8D6EB25603E1E00642C37 /* Assets.xcassets */; };
@@ -18,8 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8122F9D72561222900708C1D /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Movie+CoreDataClass.swift"; path = "CoreDataProject/Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8122F9D82561222900708C1D /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Movie+CoreDataProperties.swift"; path = "CoreDataProject/Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8122F9D72561222900708C1D /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8122F9D82561222900708C1D /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		81B59F8625612C8F00F0AED0 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		81B59F8725612C8F00F0AED0 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		81B59F8B25612D0C00F0AED0 /* DynamicFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFiltering.swift; sourceTree = "<group>"; };
+		81B59F922561308A00F0AED0 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		81B59F952561402400F0AED0 /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		81B59F962561402400F0AED0 /* Candy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		81B59F972561402400F0AED0 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		81B59F982561402400F0AED0 /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		81B59FA02561434900F0AED0 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
 		81F8D6E425603E1A00642C37 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F8D6E725603E1A00642C37 /* CoreDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectApp.swift; sourceTree = "<group>"; };
 		81F8D6E925603E1A00642C37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,11 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81B59F9F2561432500F0AED0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81B59F952561402400F0AED0 /* Candy+CoreDataClass.swift */,
+				81B59F962561402400F0AED0 /* Candy+CoreDataProperties.swift */,
+				81B59F972561402400F0AED0 /* Country+CoreDataClass.swift */,
+				81B59F982561402400F0AED0 /* Country+CoreDataProperties.swift */,
+				81B59F8625612C8F00F0AED0 /* Singer+CoreDataClass.swift */,
+				81B59F8725612C8F00F0AED0 /* Singer+CoreDataProperties.swift */,
+				8122F9D72561222900708C1D /* Movie+CoreDataClass.swift */,
+				8122F9D82561222900708C1D /* Movie+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		81F8D6DB25603E1A00642C37 = {
 			isa = PBXGroup;
 			children = (
-				8122F9D72561222900708C1D /* Movie+CoreDataClass.swift */,
-				8122F9D82561222900708C1D /* Movie+CoreDataProperties.swift */,
 				81F8D6E625603E1A00642C37 /* CoreDataProject */,
 				81F8D6E525603E1A00642C37 /* Products */,
 			);
@@ -62,6 +93,7 @@
 		81F8D6E625603E1A00642C37 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				81B59F9F2561432500F0AED0 /* Models */,
 				81F8D6E725603E1A00642C37 /* CoreDataProjectApp.swift */,
 				81F8D6E925603E1A00642C37 /* ContentView.swift */,
 				81F8D6EB25603E1E00642C37 /* Assets.xcassets */,
@@ -69,6 +101,9 @@
 				81F8D6F525603E1E00642C37 /* Info.plist */,
 				81F8D6F225603E1E00642C37 /* CoreDataProject.xcdatamodeld */,
 				81F8D6ED25603E1E00642C37 /* Preview Content */,
+				81B59F8B25612D0C00F0AED0 /* DynamicFiltering.swift */,
+				81B59F922561308A00F0AED0 /* FilteredList.swift */,
+				81B59FA02561434900F0AED0 /* RelationshipsView.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -150,10 +185,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B59F8C25612D0C00F0AED0 /* DynamicFiltering.swift in Sources */,
+				81B59F8825612C8F00F0AED0 /* Singer+CoreDataClass.swift in Sources */,
+				81B59F9C2561402400F0AED0 /* Country+CoreDataProperties.swift in Sources */,
+				81B59FA12561434900F0AED0 /* RelationshipsView.swift in Sources */,
+				81B59F932561308A00F0AED0 /* FilteredList.swift in Sources */,
+				81B59F9A2561402400F0AED0 /* Candy+CoreDataProperties.swift in Sources */,
 				81F8D6F125603E1E00642C37 /* Persistence.swift in Sources */,
+				81B59F992561402400F0AED0 /* Candy+CoreDataClass.swift in Sources */,
+				81B59F9B2561402400F0AED0 /* Country+CoreDataClass.swift in Sources */,
 				81F8D6EA25603E1A00642C37 /* ContentView.swift in Sources */,
 				81F8D6F425603E1E00642C37 /* CoreDataProject.xcdatamodeld in Sources */,
 				8122F9D92561222900708C1D /* Movie+CoreDataClass.swift in Sources */,
+				81B59F8925612C8F00F0AED0 /* Singer+CoreDataProperties.swift in Sources */,
 				8122F9DA2561222900708C1D /* Movie+CoreDataProperties.swift in Sources */,
 				81F8D6E825603E1A00642C37 /* CoreDataProjectApp.swift in Sources */,
 			);
