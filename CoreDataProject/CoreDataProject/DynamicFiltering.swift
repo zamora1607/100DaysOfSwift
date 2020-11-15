@@ -15,9 +15,8 @@ struct DynamicFiltering: View {
     
     var body: some View {
         VStack {
-            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+            FilteredList(filterKey: "lastName", filterValue: lastNameFilter, predicate: .beginsWith, sortDescriptors: [NSSortDescriptor(keyPath: \Singer.lastName, ascending: true)]) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
-                
             }
             
             Button("Add Examples") {
