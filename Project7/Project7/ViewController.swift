@@ -14,6 +14,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let button = UIBarButtonItem(image: UIImage(systemName: "info"), style: .plain, target: self, action: #selector(showInfo))
+        self.navigationItem.setRightBarButton(button, animated: false)
+        
         let urlString :String
         
         if navigationController?.tabBarItem.tag == 0 {
@@ -39,6 +42,12 @@ class ViewController: UITableViewController {
             petitions = jsonPetitions.results
             tableView.reloadData()
         }
+    }
+    
+    @objc func showInfo() {
+        let ac = UIAlertController(title: "Warning", message: "The data comes from the We The People API of Whitehouse", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
     
     func showError() {
