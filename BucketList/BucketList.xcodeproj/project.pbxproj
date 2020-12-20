@@ -15,6 +15,7 @@
 		81D0DA4E258F6D2700859A24 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0DA4D258F6D2700859A24 /* MKPointAnnotation-ObservableObject.swift */; };
 		81D0DA51258F6F8B00859A24 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0DA50258F6F8B00859A24 /* EditView.swift */; };
 		81D0DA54258F716E00859A24 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0DA53258F716E00859A24 /* Result.swift */; };
+		81D0DA58258F795600859A24 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0DA57258F795600859A24 /* MKPointAnnotation-Codable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		81D0DA4D258F6D2700859A24 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		81D0DA50258F6F8B00859A24 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		81D0DA53258F716E00859A24 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		81D0DA57258F795600859A24 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				81D0DA48258F581A00859A24 /* MapView.swift */,
 				81D0DA4D258F6D2700859A24 /* MKPointAnnotation-ObservableObject.swift */,
 				81D0DA50258F6F8B00859A24 /* EditView.swift */,
+				81D0DA57258F795600859A24 /* MKPointAnnotation-Codable.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D0DA58258F795600859A24 /* MKPointAnnotation-Codable.swift in Sources */,
 				81D0DA54258F716E00859A24 /* Result.swift in Sources */,
 				81D0DA2E258944FA00859A24 /* ContentView.swift in Sources */,
 				81D0DA51258F6F8B00859A24 /* EditView.swift in Sources */,
