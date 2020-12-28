@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81DBBCB02599E82300BE2D10 /* RememberPeopleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */; };
+		81DBBCB12599E82300BE2D10 /* RememberPeopleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */; };
+		81DBBCB22599E82300BE2D10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9E2599E82300BE2D10 /* ContentView.swift */; };
+		81DBBCB32599E82300BE2D10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9E2599E82300BE2D10 /* ContentView.swift */; };
+		81DBBCB42599E82300BE2D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DBBC9F2599E82300BE2D10 /* Assets.xcassets */; };
+		81DBBCB52599E82300BE2D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DBBC9F2599E82300BE2D10 /* Assets.xcassets */; };
+		81DBBCC12599E98800BE2D10 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCC02599E98800BE2D10 /* Person.swift */; };
+		81DBBCC22599E98800BE2D10 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCC02599E98800BE2D10 /* Person.swift */; };
+		81DBBCC62599E9BC00BE2D10 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCC52599E9BC00BE2D10 /* PersonView.swift */; };
+		81DBBCC72599E9BC00BE2D10 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCC52599E9BC00BE2D10 /* PersonView.swift */; };
+		81DBBCCB2599EB7D00BE2D10 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */; };
+		81DBBCCC2599EB7D00BE2D10 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */; };
+		81DBBCD02599EE6D00BE2D10 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */; };
+		81DBBCD12599EE6D00BE2D10 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberPeopleApp.swift; sourceTree = "<group>"; };
+		81DBBC9E2599E82300BE2D10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81DBBC9F2599E82300BE2D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81DBBCA42599E82300BE2D10 /* RememberPeople.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberPeople.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DBBCA72599E82300BE2D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81DBBCAC2599E82300BE2D10 /* RememberPeople.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberPeople.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DBBCAE2599E82300BE2D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81DBBCAF2599E82300BE2D10 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		81DBBCC02599E98800BE2D10 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		81DBBCC52599E9BC00BE2D10 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81DBBCA12599E82300BE2D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DBBCA92599E82300BE2D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81DBBC972599E82200BE2D10 = {
+			isa = PBXGroup;
+			children = (
+				81DBBC9C2599E82300BE2D10 /* Shared */,
+				81DBBCA62599E82300BE2D10 /* iOS */,
+				81DBBCAD2599E82300BE2D10 /* macOS */,
+				81DBBCA52599E82300BE2D10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81DBBC9C2599E82300BE2D10 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */,
+				81DBBC9E2599E82300BE2D10 /* ContentView.swift */,
+				81DBBC9F2599E82300BE2D10 /* Assets.xcassets */,
+				81DBBCC02599E98800BE2D10 /* Person.swift */,
+				81DBBCC52599E9BC00BE2D10 /* PersonView.swift */,
+				81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */,
+				81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		81DBBCA52599E82300BE2D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81DBBCA42599E82300BE2D10 /* RememberPeople.app */,
+				81DBBCAC2599E82300BE2D10 /* RememberPeople.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81DBBCA62599E82300BE2D10 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81DBBCA72599E82300BE2D10 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		81DBBCAD2599E82300BE2D10 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				81DBBCAE2599E82300BE2D10 /* Info.plist */,
+				81DBBCAF2599E82300BE2D10 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81DBBCA32599E82300BE2D10 /* RememberPeople (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DBBCB82599E82300BE2D10 /* Build configuration list for PBXNativeTarget "RememberPeople (iOS)" */;
+			buildPhases = (
+				81DBBCA02599E82300BE2D10 /* Sources */,
+				81DBBCA12599E82300BE2D10 /* Frameworks */,
+				81DBBCA22599E82300BE2D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RememberPeople (iOS)";
+			productName = "RememberPeople (iOS)";
+			productReference = 81DBBCA42599E82300BE2D10 /* RememberPeople.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81DBBCAB2599E82300BE2D10 /* RememberPeople (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DBBCBB2599E82300BE2D10 /* Build configuration list for PBXNativeTarget "RememberPeople (macOS)" */;
+			buildPhases = (
+				81DBBCA82599E82300BE2D10 /* Sources */,
+				81DBBCA92599E82300BE2D10 /* Frameworks */,
+				81DBBCAA2599E82300BE2D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RememberPeople (macOS)";
+			productName = "RememberPeople (macOS)";
+			productReference = 81DBBCAC2599E82300BE2D10 /* RememberPeople.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81DBBC982599E82200BE2D10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					81DBBCA32599E82300BE2D10 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					81DBBCAB2599E82300BE2D10 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 81DBBC9B2599E82200BE2D10 /* Build configuration list for PBXProject "RememberPeople" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81DBBC972599E82200BE2D10;
+			productRefGroup = 81DBBCA52599E82300BE2D10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81DBBCA32599E82300BE2D10 /* RememberPeople (iOS) */,
+				81DBBCAB2599E82300BE2D10 /* RememberPeople (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81DBBCA22599E82300BE2D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DBBCB42599E82300BE2D10 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DBBCAA2599E82300BE2D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DBBCB52599E82300BE2D10 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81DBBCA02599E82300BE2D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DBBCC12599E98800BE2D10 /* Person.swift in Sources */,
+				81DBBCD02599EE6D00BE2D10 /* ImageSaver.swift in Sources */,
+				81DBBCC62599E9BC00BE2D10 /* PersonView.swift in Sources */,
+				81DBBCCB2599EB7D00BE2D10 /* ImagePicker.swift in Sources */,
+				81DBBCB22599E82300BE2D10 /* ContentView.swift in Sources */,
+				81DBBCB02599E82300BE2D10 /* RememberPeopleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DBBCA82599E82300BE2D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DBBCC22599E98800BE2D10 /* Person.swift in Sources */,
+				81DBBCD12599EE6D00BE2D10 /* ImageSaver.swift in Sources */,
+				81DBBCC72599E9BC00BE2D10 /* PersonView.swift in Sources */,
+				81DBBCCC2599EB7D00BE2D10 /* ImagePicker.swift in Sources */,
+				81DBBCB32599E82300BE2D10 /* ContentView.swift in Sources */,
+				81DBBCB12599E82300BE2D10 /* RememberPeopleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		81DBBCB62599E82300BE2D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81DBBCB72599E82300BE2D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		81DBBCB92599E82300BE2D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zamora.RememberPeople;
+				PRODUCT_NAME = RememberPeople;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81DBBCBA2599E82300BE2D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zamora.RememberPeople;
+				PRODUCT_NAME = RememberPeople;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81DBBCBC2599E82300BE2D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 858G4SLVS5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zamora.RememberPeople;
+				PRODUCT_NAME = RememberPeople;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		81DBBCBD2599E82300BE2D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 858G4SLVS5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zamora.RememberPeople;
+				PRODUCT_NAME = RememberPeople;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81DBBC9B2599E82200BE2D10 /* Build configuration list for PBXProject "RememberPeople" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DBBCB62599E82300BE2D10 /* Debug */,
+				81DBBCB72599E82300BE2D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DBBCB82599E82300BE2D10 /* Build configuration list for PBXNativeTarget "RememberPeople (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DBBCB92599E82300BE2D10 /* Debug */,
+				81DBBCBA2599E82300BE2D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DBBCBB2599E82300BE2D10 /* Build configuration list for PBXNativeTarget "RememberPeople (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DBBCBC2599E82300BE2D10 /* Debug */,
+				81DBBCBD2599E82300BE2D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81DBBC982599E82200BE2D10 /* Project object */;
+}
