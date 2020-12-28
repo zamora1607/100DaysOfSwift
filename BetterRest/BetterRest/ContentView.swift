@@ -42,6 +42,7 @@ struct ContentView: View {
                             Text("\(coffeAmount) cups")
                         }
                     }
+                    .accessibility(label: Text("\(coffeAmount) cups of coffe"))
                 }
             }.navigationTitle("BetterRest")
         }

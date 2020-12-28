@@ -39,7 +39,7 @@ struct ContentView: View {
                                         isDateVisible.toggle()
                                     }) {
                                         Image(systemName: isDateVisible ? "person.circle" : "timer")
-                                    }
+                                    }.accessibility(label: Text("Show \(isDateVisible ? "flight crew" : "date")"))
             )
         }
     }
