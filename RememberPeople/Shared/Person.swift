@@ -12,6 +12,8 @@ struct Person: Codable, Comparable {
     var uuid: UUID = UUID()
     var name: String
     var imageURL: String
+    var longitude: Double?
+    var latitude: Double?
     
     static func < (lhs: Person, rhs: Person) -> Bool {
         return lhs.name < rhs.name

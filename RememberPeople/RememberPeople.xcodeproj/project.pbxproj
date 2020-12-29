@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B6C44E259B663D00FB3D3E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B6C44D259B663D00FB3D3E /* MapView.swift */; };
+		81B6C44F259B663D00FB3D3E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B6C44D259B663D00FB3D3E /* MapView.swift */; };
 		81DBBCB02599E82300BE2D10 /* RememberPeopleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */; };
 		81DBBCB12599E82300BE2D10 /* RememberPeopleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */; };
 		81DBBCB22599E82300BE2D10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBC9E2599E82300BE2D10 /* ContentView.swift */; };
@@ -21,9 +23,14 @@
 		81DBBCCC2599EB7D00BE2D10 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */; };
 		81DBBCD02599EE6D00BE2D10 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */; };
 		81DBBCD12599EE6D00BE2D10 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */; };
+		81DBBCD7259B480900BE2D10 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCD6259B480900BE2D10 /* LocationFetcher.swift */; };
+		81DBBCD8259B480900BE2D10 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCD6259B480900BE2D10 /* LocationFetcher.swift */; };
+		81DBBCDC259B490200BE2D10 /* AddPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCDB259B490200BE2D10 /* AddPerson.swift */; };
+		81DBBCDD259B490200BE2D10 /* AddPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DBBCDB259B490200BE2D10 /* AddPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81B6C44D259B663D00FB3D3E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberPeopleApp.swift; sourceTree = "<group>"; };
 		81DBBC9E2599E82300BE2D10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81DBBC9F2599E82300BE2D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +43,8 @@
 		81DBBCC52599E9BC00BE2D10 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		81DBBCD6259B480900BE2D10 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		81DBBCDB259B490200BE2D10 /* AddPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +78,7 @@
 		81DBBC9C2599E82300BE2D10 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				81DBBCDB259B490200BE2D10 /* AddPerson.swift */,
 				81DBBC9D2599E82300BE2D10 /* RememberPeopleApp.swift */,
 				81DBBC9E2599E82300BE2D10 /* ContentView.swift */,
 				81DBBC9F2599E82300BE2D10 /* Assets.xcassets */,
@@ -76,6 +86,8 @@
 				81DBBCC52599E9BC00BE2D10 /* PersonView.swift */,
 				81DBBCCA2599EB7D00BE2D10 /* ImagePicker.swift */,
 				81DBBCCF2599EE6D00BE2D10 /* ImageSaver.swift */,
+				81DBBCD6259B480900BE2D10 /* LocationFetcher.swift */,
+				81B6C44D259B663D00FB3D3E /* MapView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -205,9 +217,12 @@
 			files = (
 				81DBBCC12599E98800BE2D10 /* Person.swift in Sources */,
 				81DBBCD02599EE6D00BE2D10 /* ImageSaver.swift in Sources */,
+				81DBBCDC259B490200BE2D10 /* AddPerson.swift in Sources */,
 				81DBBCC62599E9BC00BE2D10 /* PersonView.swift in Sources */,
+				81DBBCD7259B480900BE2D10 /* LocationFetcher.swift in Sources */,
 				81DBBCCB2599EB7D00BE2D10 /* ImagePicker.swift in Sources */,
 				81DBBCB22599E82300BE2D10 /* ContentView.swift in Sources */,
+				81B6C44E259B663D00FB3D3E /* MapView.swift in Sources */,
 				81DBBCB02599E82300BE2D10 /* RememberPeopleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,9 +233,12 @@
 			files = (
 				81DBBCC22599E98800BE2D10 /* Person.swift in Sources */,
 				81DBBCD12599EE6D00BE2D10 /* ImageSaver.swift in Sources */,
+				81DBBCDD259B490200BE2D10 /* AddPerson.swift in Sources */,
 				81DBBCC72599E9BC00BE2D10 /* PersonView.swift in Sources */,
+				81DBBCD8259B480900BE2D10 /* LocationFetcher.swift in Sources */,
 				81DBBCCC2599EB7D00BE2D10 /* ImagePicker.swift in Sources */,
 				81DBBCB32599E82300BE2D10 /* ContentView.swift in Sources */,
+				81B6C44F259B663D00FB3D3E /* MapView.swift in Sources */,
 				81DBBCB12599E82300BE2D10 /* RememberPeopleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

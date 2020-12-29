@@ -10,74 +10,45 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var people = [Person]()
-    @State private var showImagePicker = false
     @State private var uiImage: UIImage?
     @State private var newPersonName: String = ""
+    
+    @State private var showImagePicker = false
+    @State private var showAddPerson = false
     
     var body: some View {
         NavigationView {
             VStack {
-                if (uiImage != nil) { //should be separate view
-                    Image(uiImage: uiImage!)
-                        .resizable()
-                        .scaledToFit()
-                    TextField("Enter person name", text: $newPersonName)
-                        .padding()
-                    HStack {
-                        Button("Save") {
-                            saveNewPerson()
-                        }
-                        .greenButton()
-                        Button("Dismiss") {
-                            uiImage = nil
-                            newPersonName = ""
-                        }
-                        .greenButton()
+                if showAddPerson {
+                    VStack {
+                        AddPerson(peopleArray: people, inputImage: uiImage!)
                     }
+                    Spacer()
                 } else {
-                    Button("Add new") {
-                        showImagePicker = true
-                    }
-                    .greenButton()
-                    List(people, id: \.uuid) { person in
-                        NavigationLink(destination: PersonView(person: person)) {
-                            Text(person.name)
+                    VStack {
+                        Spacer()
+                        Button("Add new") {
+                            showImagePicker = true
+                        }
+                        .greenButton()
+                        List(people, id: \.uuid) { person in
+                            NavigationLink(destination: PersonView(person: person)) {
+                                Text(person.name)
+                            }
                         }
                     }
                 }
             }.navigationBarTitle(Text("New people"))
         }
         .onAppear(perform: loadData)
-        .sheet(isPresented: $showImagePicker) {
+        .sheet(isPresented: $showImagePicker, onDismiss: showAddPersonScreen) {
             ImagePicker(image: self.$uiImage)
         }
     }
     
-    func saveNewPerson() {
-        guard let uiImage = uiImage else { return }
-        if newPersonName.isEmpty {
-            print("Name cannot be empty - show alert for that")
-            return
-        }
-        
-        let imageSaver = ImageSaver()
-        let fileName = newPersonName + String(Date().timeIntervalSince1970)
-        print("New file name \(fileName)")
-        
-        imageSaver.successHandler = {
-            print("Success")
-            let newPerson = Person(name: newPersonName, imageURL: fileName)
-            self.people.append(newPerson)
-            self.saveData()
-            self.uiImage = nil
-            self.newPersonName = ""
-        }
-        
-        imageSaver.errorHandler = {
-            print("Oops: \($0.localizedDescription)")
-        }
-        
-        imageSaver.writeToDisk(image: uiImage, name: fileName)
+    func showAddPersonScreen() {
+        guard let _ = uiImage else { return }
+        self.showAddPerson = true
     }
     
     func getDocumentsDirectory() -> URL {
@@ -94,17 +65,6 @@ struct ContentView: View {
             people = peopleArray.sorted()
         } catch {
             print("Cannot decode data")
-        }
-    }
-    
-    func saveData() {
-        let filename = getDocumentsDirectory().appendingPathComponent("People")
-        
-        do {
-            let data = try JSONEncoder().encode(self.people)
-            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
-        } catch {
-            print("Unable to save data")
         }
     }
 }
