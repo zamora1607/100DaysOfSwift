@@ -7,57 +7,65 @@
 
 import SwiftUI
 
-class User: ObservableObject {
-    @Published var name = "Taylor Swift"
-}
-
-struct EditView: View {
-    @EnvironmentObject var user: User
-    
-    var body: some View {
-        TextField("Name", text: $user.name)
-    }
-}
-
-struct DisplayView: View {
-    @EnvironmentObject var user: User
-    
-    var body: some View {
-        Text(user.name)
-    }
+enum NetworkError: Error {
+    case badURL, requestFailed, unknown
 }
 
 struct ContentView: View {
-//    let user = User()
     
-    @State private var selectedTab = 0
+    @ObservedObject var updater = DelayedUpdater()
     
     var body: some View {
-//        VStack {
-//            EditView()
-//            DisplayView()
-//        }.environmentObject(user)
-        
-        TabView(selection: $selectedTab) {
-            Text("tab 1")
-                .onTapGesture {
-                    self.selectedTab = 1
-                }
-                .tabItem {
-                    Image(systemName: "star")
-                    Text("one")
-                }
-                .tag(0)
-            Text("tab 2")
-                .onTapGesture {
-                    self.selectedTab = 2
-                }
-                .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("two")
-                }
-                .tag(1)
+        VStack {
+            Text("value is: \(updater.value)")
+            Image("example")
+                .interpolation(.none)
+                .resizable()
+                .scaledToFit()
+                .frame(maxHeight: .infinity)
+                .background(Color.black)
+                .edgesIgnoringSafeArea(.all)
+            
+//            Text("Hello, World!")
+//                .onAppear {
+//                    self.fetchData(from: "https://www.apple.com") { (result) in
+//                        switch result {
+//                        case .success(let str):
+//                            print(str)
+//                        case .failure(let error):
+//                            switch error {
+//                            case .badURL:
+//                                print("Bad URL")
+//                            case .requestFailed:
+//                                print("Network problems")
+//                            case .unknown:
+//                                print("Uknown error")
+//                            }
+//                        }
+//                    }
+//                }
         }
+    }
+    
+    func fetchData(from urlString: String, completion: @escaping ((Result<String, NetworkError>) -> Void)) {
+        
+        guard let url = URL(string: urlString) else {
+            completion(.failure(.badURL))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let data = data {
+                    let stringData = String(decoding: data, as: UTF8.self)
+                    completion(.success(stringData))
+                } else if error != nil {
+                    completion(.failure(.requestFailed))
+                } else {
+                    completion(.failure(.unknown))
+                }
+            }
+        }.resume()
     }
 }
 

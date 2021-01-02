@@ -13,6 +13,8 @@
 		814D3D61259CDBC50039AC3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D4C259CDBC50039AC3C /* ContentView.swift */; };
 		814D3D62259CDBC50039AC3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814D3D4D259CDBC50039AC3C /* Assets.xcassets */; };
 		814D3D63259CDBC50039AC3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814D3D4D259CDBC50039AC3C /* Assets.xcassets */; };
+		814D3D7125A0B12C0039AC3C /* DelayedUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D7025A0B12C0039AC3C /* DelayedUpdater.swift */; };
+		814D3D7225A0B12C0039AC3C /* DelayedUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D7025A0B12C0039AC3C /* DelayedUpdater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		814D3D5A259CDBC50039AC3C /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814D3D5C259CDBC50039AC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		814D3D5D259CDBC50039AC3C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		814D3D7025A0B12C0039AC3C /* DelayedUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedUpdater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				814D3D4B259CDBC50039AC3C /* HotProspectsApp.swift */,
 				814D3D4C259CDBC50039AC3C /* ContentView.swift */,
 				814D3D4D259CDBC50039AC3C /* Assets.xcassets */,
+				814D3D7025A0B12C0039AC3C /* DelayedUpdater.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -187,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814D3D7125A0B12C0039AC3C /* DelayedUpdater.swift in Sources */,
 				814D3D60259CDBC50039AC3C /* ContentView.swift in Sources */,
 				814D3D5E259CDBC50039AC3C /* HotProspectsApp.swift in Sources */,
 			);
@@ -196,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814D3D7225A0B12C0039AC3C /* DelayedUpdater.swift in Sources */,
 				814D3D61259CDBC50039AC3C /* ContentView.swift in Sources */,
 				814D3D5F259CDBC50039AC3C /* HotProspectsApp.swift in Sources */,
 			);
