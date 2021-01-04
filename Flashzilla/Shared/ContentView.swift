@@ -7,82 +7,73 @@
 
 import SwiftUI
 
-struct ContentView: View { //Gestures 
+struct ContentView: View {
     
-//    @State private var currentAmount: CGFloat = 0
-//    @State private var finalAmount: CGFloat = 1
-//
-//    @State private var currentAmountRotation: Angle = .degrees(0)
-//    @State private var finalAmountRotation: Angle = .degrees(0)
+//    let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
+//    @State private var counter = 0
+ 
+//    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     
-    @State private var offset = CGSize.zero
-    @State private var isDragging = false
+//    @Environment(\.accessibilityReduceMotion) var reduceMotion
+//    @State private var scale: CGFloat = 1
+    
+    @Environment(\.accessibilityReduceTransparency) var reduceTransparency
     
     var body: some View {
+        Text("Transparency")
+            .padding()
+            .background(reduceTransparency ? Color.black : Color.black.opacity(0.5))
+            .foregroundColor(.white)
+            .clipShape(Capsule())
         
-        let dragGesture = DragGesture()
-            .onChanged{ value in self.offset = value.translation }
-            .onEnded{ _ in
-                withAnimation {
-                    self.offset = .zero
-                    self.isDragging = false
+/*
+        Text("Hello world")
+            .scaleEffect(scale)
+            .onTapGesture {
+                withOptionalAnimation {
+                    self.scale *= 1.5
                 }
             }
+*/
         
-            let pressGesture = LongPressGesture()
-                .onEnded { value in
-                    withAnimation {
-                        self.isDragging = true
-                    }
+/*
+        HStack {
+            if differentiateWithoutColor {
+                Image(systemName: "checkmark.circle")
+            }
+            
+            Text("Success")
+        }
+        .padding()
+        .background(differentiateWithoutColor ? Color.black : Color.green)
+        .foregroundColor(.white)
+        .clipShape(Capsule())
+ */
+/*
+        Text("example")
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification), perform: { _ in
+                print("Moving to the background")
+            })
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification), perform: { _ in
+                print("screenshot")
+            })
+            .onReceive(timer, perform: { time in
+                if self.counter == 5 {
+                    self.timer.upstream.connect().cancel()
+                } else {
+                    print("The time is now \(time)")
                 }
-        
-        let combined = pressGesture.sequenced(before: dragGesture)
-        
-        return Circle()
-            .fill(Color.red)
-            .frame(width: 64, height: 64)
-            .scaleEffect(isDragging ? 1.5 : 1)
-            .offset(offset)
-            .gesture(combined)
-//        VStack {
-//            Text("Hello world!")
-//                .onTapGesture {
-//                    print("text tapped")
-//                }
-//        }
-////        .highPriorityGesture(
-//        .simultaneousGesture(
-//            TapGesture()
-//                .onEnded({ _ in
-//                    print("Vstack tapped")
-//                })
-//        )
-   
-        
-        
-//        Text("Hello, world!")
-//            .scaleEffect(finalAmount + currentAmount)
-//            .gesture(
-//                MagnificationGesture()
-//                    .onChanged({ (amount) in
-//                        self.currentAmount = amount - 1
-//                    })
-//                    .onEnded({ (amount) in
-//                        self.finalAmount += self.currentAmount
-//                        self.currentAmount = 0
-//                    })
-//            )
-//            .rotationEffect(currentAmountRotation + finalAmountRotation)
-//            .gesture(
-//                RotationGesture()
-//                    .onChanged({ angle in
-//                        self.currentAmountRotation = angle
-//                    })
-//                    .onEnded({ angle in
-//                        self.finalAmountRotation += self.currentAmountRotation
-//                        self.currentAmountRotation = .degrees(0)
-//                    })
-//            )
+                self.counter += 1
+            })
+ */
+    }
+    
+    func withOptionalAnimation<Result>(_ animation: Animation? = .default, _ body: () throws -> Result) rethrows -> Result {
+        if UIAccessibility.isReduceMotionEnabled {
+            return try body()
+        } else {
+            return try withAnimation(animation, body)
+        }
     }
 }
 

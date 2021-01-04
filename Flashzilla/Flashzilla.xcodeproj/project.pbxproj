@@ -13,9 +13,6 @@
 		814D3DB025A1E2BA0039AC3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D9B25A1E2B90039AC3C /* ContentView.swift */; };
 		814D3DB125A1E2BA0039AC3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814D3D9C25A1E2BA0039AC3C /* Assets.xcassets */; };
 		814D3DB225A1E2BA0039AC3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814D3D9C25A1E2BA0039AC3C /* Assets.xcassets */; };
-		814D3DC025A1E8B50039AC3C /* Vibrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3DBF25A1E8B50039AC3C /* Vibrations.swift */; };
-		814D3DC325A1E8B90039AC3C /* Vibrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3DBF25A1E8B50039AC3C /* Vibrations.swift */; };
-		814D3DC925A1EEE30039AC3C /* DisableUserInteractivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3DC825A1EEE30039AC3C /* DisableUserInteractivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +24,6 @@
 		814D3DA925A1E2BA0039AC3C /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814D3DAB25A1E2BA0039AC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		814D3DAC25A1E2BA0039AC3C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		814D3DBF25A1E8B50039AC3C /* Vibrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrations.swift; sourceTree = "<group>"; };
-		814D3DC825A1EEE30039AC3C /* DisableUserInteractivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableUserInteractivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +57,6 @@
 		814D3D9925A1E2B90039AC3C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				814D3DBF25A1E8B50039AC3C /* Vibrations.swift */,
-				814D3DC825A1EEE30039AC3C /* DisableUserInteractivity.swift */,
 				814D3D9A25A1E2B90039AC3C /* FlashzillaApp.swift */,
 				814D3D9B25A1E2B90039AC3C /* ContentView.swift */,
 				814D3D9C25A1E2BA0039AC3C /* Assets.xcassets */,
@@ -195,9 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				814D3DAF25A1E2BA0039AC3C /* ContentView.swift in Sources */,
-				814D3DC025A1E8B50039AC3C /* Vibrations.swift in Sources */,
 				814D3DAD25A1E2BA0039AC3C /* FlashzillaApp.swift in Sources */,
-				814D3DC925A1EEE30039AC3C /* DisableUserInteractivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +197,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				814D3DB025A1E2BA0039AC3C /* ContentView.swift in Sources */,
-				814D3DC325A1E8B90039AC3C /* Vibrations.swift in Sources */,
 				814D3DAE25A1E2BA0039AC3C /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
