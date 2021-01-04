@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81155AB225A386540036A502 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155AB125A386540036A502 /* Card.swift */; };
+		81155AB325A386540036A502 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155AB125A386540036A502 /* Card.swift */; };
+		81155AB725A387450036A502 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155AB625A387450036A502 /* CardView.swift */; };
+		81155AB825A387450036A502 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155AB625A387450036A502 /* CardView.swift */; };
 		814D3DAD25A1E2BA0039AC3C /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D9A25A1E2B90039AC3C /* FlashzillaApp.swift */; };
 		814D3DAE25A1E2BA0039AC3C /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D9A25A1E2B90039AC3C /* FlashzillaApp.swift */; };
 		814D3DAF25A1E2BA0039AC3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D3D9B25A1E2B90039AC3C /* ContentView.swift */; };
@@ -16,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81155AB125A386540036A502 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		81155AB625A387450036A502 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		814D3D9A25A1E2B90039AC3C /* FlashzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaApp.swift; sourceTree = "<group>"; };
 		814D3D9B25A1E2B90039AC3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		814D3D9C25A1E2BA0039AC3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,8 +63,10 @@
 		814D3D9925A1E2B90039AC3C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				81155AB625A387450036A502 /* CardView.swift */,
 				814D3D9A25A1E2B90039AC3C /* FlashzillaApp.swift */,
 				814D3D9B25A1E2B90039AC3C /* ContentView.swift */,
+				81155AB125A386540036A502 /* Card.swift */,
 				814D3D9C25A1E2BA0039AC3C /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -188,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				814D3DAF25A1E2BA0039AC3C /* ContentView.swift in Sources */,
+				81155AB225A386540036A502 /* Card.swift in Sources */,
+				81155AB725A387450036A502 /* CardView.swift in Sources */,
 				814D3DAD25A1E2BA0039AC3C /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				814D3DB025A1E2BA0039AC3C /* ContentView.swift in Sources */,
+				81155AB325A386540036A502 /* Card.swift in Sources */,
+				81155AB825A387450036A502 /* CardView.swift in Sources */,
 				814D3DAE25A1E2BA0039AC3C /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
