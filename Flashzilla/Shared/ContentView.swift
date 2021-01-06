@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct ContentView: View {
     
@@ -15,7 +16,9 @@ struct ContentView: View {
     @State private var cards = [Card]()
     @State private var timeRemaining = 100
     @State private var isActive = true
-    @State private var showingEditScreen = false
+    @State private var showingSheet = false
+    @State private var engine: CHHapticEngine?
+    @State private var sheetContent: AnyView?
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -28,7 +31,7 @@ struct ContentView: View {
             VStack {
                 Text("Time: \(timeRemaining)")
                     .font(.largeTitle)
-                    .foregroundColor(.white)
+                    .foregroundColor(timeRemaining > 0 ? .white : .red)
                     .padding(.horizontal, 20)
                     .padding(.vertical, 5)
                     .background(
@@ -38,9 +41,9 @@ struct ContentView: View {
                     )
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: self.cards[index]) {
+                        CardView(card: self.cards[index]) { success in
                             withAnimation {
-                                self.removeCard(at: index)
+                                self.removeCard(at: index, correctAnswer: success)
                             }
                         }
                         .stacked(at: index, in: cards.count)
@@ -59,9 +62,20 @@ struct ContentView: View {
             }
             VStack {
                 HStack {
+                    Button(action: {
+                        //self.sheetContent = SettingsView()
+                        self.showingSheet = true
+                    }){
+                        Image(systemName: "gear")
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+                    
                     Spacer()
                     Button(action: {
-                        self.showingEditScreen = true
+                        //self.sheetContent = EditCards()
+                        self.showingSheet = true
                     }) {
                         Image(systemName: "plus.circle")
                             .padding()
@@ -81,7 +95,7 @@ struct ContentView: View {
                     HStack {
                         Button(action: {
                             withAnimation {
-                                self.removeCard(at: self.cards.count - 1)
+                                self.removeCard(at: self.cards.count - 1, correctAnswer: false)
                             }
                         }) {
                             Image(systemName: "xmark.circle")
@@ -94,7 +108,7 @@ struct ContentView: View {
                         Spacer()
                         Button(action: {
                             withAnimation {
-                                self.removeCard(at: self.cards.count - 1)
+                                self.removeCard(at: self.cards.count - 1, correctAnswer: true)
                             }
                         }) {
                             
@@ -113,14 +127,21 @@ struct ContentView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
-            EditCards()
+        .sheet(isPresented: $showingSheet, onDismiss: resetCards) {
+            sheetContent
         }
+//        .sheet(isPresented: $showingSettingsScreen, onDismiss: resetCards) {
+//            SettingsView()
+//        }
         .onAppear(perform: resetCards)
         .onReceive(timer) { time in
             guard self.isActive else { return }
+            prepareHaptics()
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
+                if self.timeRemaining == 0 {
+                    heavyFailure()
+                }
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
@@ -133,9 +154,17 @@ struct ContentView: View {
         }
     }
     
-    func removeCard(at index: Int) {
+    func removeCard(at index: Int, correctAnswer: Bool) {
         guard index >= 0 else { return }
-        cards.remove(at: index)
+        
+        let tryAgain = UserDefaults.standard.bool(forKey: "TryAgain")
+        if tryAgain && !correctAnswer {
+            let card = cards.remove(at: index)
+            cards.append(card)
+        } else {
+            cards.remove(at: index)
+        }
+        
         if cards.isEmpty {
             isActive = false
         }
@@ -153,6 +182,42 @@ struct ContentView: View {
                 self.cards = decoded
             }
         }
+    }
+    
+    func prepareHaptics() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        
+        do {
+            self.engine = try CHHapticEngine()
+            try engine?.start()
+        } catch {
+            print("Cannot start engine with error: \(error.localizedDescription)")
+        }
+    }
+    
+    func heavyFailure() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        
+        var events = [CHHapticEvent]()
+        
+        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
+        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.6)
+        let event = CHHapticEvent(eventType: .hapticContinuous, parameters: [intensity, sharpness], relativeTime: 0, duration: 0.5)
+        events.append(event)
+        
+        do {
+            let pattern = try CHHapticPattern(events: events, parameters: [])
+            let player = try engine?.makePlayer(with: pattern)
+            try player?.start(atTime: 0)
+        } catch {
+            print("Failed to play haptic pattern: \(error.localizedDescription)")
+        }
+    }
+    
+    enum SheetVersion {
+        case none
+        case settings
+        case addCards
     }
 }
 
