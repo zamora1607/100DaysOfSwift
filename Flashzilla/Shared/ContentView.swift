@@ -10,6 +10,12 @@ import CoreHaptics
 
 struct ContentView: View {
     
+    enum SheetVersion {
+        case none
+        case settings
+        case addCards
+    }
+    
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @Environment(\.accessibilityEnabled) var acessibilityEnabled
     
@@ -18,7 +24,7 @@ struct ContentView: View {
     @State private var isActive = true
     @State private var showingSheet = false
     @State private var engine: CHHapticEngine?
-    @State private var sheetContent: AnyView?
+    @State private var sheetVersion: SheetVersion = .none
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -63,7 +69,7 @@ struct ContentView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        //self.sheetContent = SettingsView()
+                        self.sheetVersion = .settings
                         self.showingSheet = true
                     }){
                         Image(systemName: "gear")
@@ -74,7 +80,7 @@ struct ContentView: View {
                     
                     Spacer()
                     Button(action: {
-                        //self.sheetContent = EditCards()
+                        self.sheetVersion = .addCards
                         self.showingSheet = true
                     }) {
                         Image(systemName: "plus.circle")
@@ -128,11 +134,15 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showingSheet, onDismiss: resetCards) {
-            sheetContent
+            switch self.sheetVersion {
+            case .none:
+                EditCards()
+            case .settings:
+                SettingsView()
+            case .addCards:
+                EditCards()
+            }
         }
-//        .sheet(isPresented: $showingSettingsScreen, onDismiss: resetCards) {
-//            SettingsView()
-//        }
         .onAppear(perform: resetCards)
         .onReceive(timer) { time in
             guard self.isActive else { return }
@@ -212,12 +222,6 @@ struct ContentView: View {
         } catch {
             print("Failed to play haptic pattern: \(error.localizedDescription)")
         }
-    }
-    
-    enum SheetVersion {
-        case none
-        case settings
-        case addCards
     }
 }
 

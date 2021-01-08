@@ -13,12 +13,14 @@ struct SettingsView: View {
     @State private var tryAgain = false
     
     var body: some View {
-        Form {
-            Toggle("Try again if your answer is wrong", isOn: $tryAgain)
+        NavigationView{
+            Form {
+                Toggle("Try again if your answer is wrong", isOn: $tryAgain)
+            }
+            .navigationBarTitle("Settings")
+            .navigationBarItems(trailing: Button("Done", action: dismiss))
+            .onAppear(perform: loadValue)
         }
-        .navigationBarTitle("Settings")
-        .navigationBarItems(trailing: Button("Done", action: dismiss))
-        .onAppear(perform: loadValue)
     }
     
     func dismiss() {
