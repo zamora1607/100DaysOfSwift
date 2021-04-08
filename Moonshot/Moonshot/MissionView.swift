@@ -24,7 +24,8 @@ struct MissionView: View {
                     Image(decorative: self.mission.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
+                        //.frame(maxWidth: geometry.size.width * 0.7)
+                        .frame(maxWidth: geometry.fr)
                         .padding(.top)
                     
                     Text(self.launchDate)
